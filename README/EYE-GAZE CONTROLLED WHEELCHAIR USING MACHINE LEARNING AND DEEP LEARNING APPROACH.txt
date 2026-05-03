@@ -1,0 +1,200 @@
+<-------EYE-GAZE CONTROLLED WHEELCHAIR USING MACHINE LEARNING AND DEEP LEARNING APPROACH------->
+
+# 👁️ EYE-GAZE CONTROLLED WHEELCHAIR SYSTEM
+
+A real-time assistive technology system that enables hands-free wheelchair control using eye-gaze tracking, powered by machine learning and computer vision.
+
+---
+
+## 📌 1. What This Project Is
+
+The Eye-Gaze Controlled Wheelchair System is a vision-based human–computer interaction platform designed to assist individuals with limited mobility.
+
+It integrates:
+- Eye movement detection  
+- Gaze direction estimation  
+- Blink-based control mechanisms  
+- Real-time wheelchair simulation  
+
+The system uses a webcam to track eye movements and converts them into directional commands for navigation.
+
+---
+
+## ❓ 2. Why This System Exists
+
+Traditional wheelchair control methods require physical input, which is not feasible for users with severe disabilities.
+
+This system addresses:
+- Lack of accessible control interfaces  
+- Dependence on caregivers  
+- Inaccuracy in existing eye-tracking systems  
+- Need for real-time, reliable interaction  
+
+By using AI-based gaze tracking, the system enables independent and intuitive mobility.
+
+---
+
+## 🚀 3. Major Features
+
+### 🔹 Eye-Gaze Tracking
+- Real-time eye tracking using MediaPipe Face Mesh  
+- Accurate facial landmark detection  
+- Pupil position estimation  
+
+### 🔹 Gaze-Based Navigation
+- 👈 Left gaze → Move Left  
+- 👉 Right gaze → Move Right  
+- 👁️ Straight gaze → Move Forward  
+- ❌ Eye closure → Stop / Start  
+
+### 🔹 Blink Detection (EAR)
+- Eye Aspect Ratio (EAR) for blink detection  
+- Long blink used as safety control  
+- Prevents accidental commands  
+
+### 🔹 Real-Time Simulation
+- 3D wheelchair simulation using OpenGL  
+- GLB model rendering with Trimesh & Pyglet  
+- Smooth real-time movement  
+
+### 🔹 Communication System
+- UDP-based communication between modules  
+- Fast and efficient data transfer  
+
+### 🔹 PDF Scrolling (Additional Feature)
+- Hands-free document navigation  
+- Eye gaze used for scrolling  
+- Improves accessibility  
+
+---
+
+## 🔄 4. End-to-End Workflow
+
+1. **Input Capture**
+   - Webcam captures live video  
+   - Frames processed using OpenCV  
+
+2. **Face & Eye Detection**
+   - MediaPipe detects facial landmarks  
+   - Eye region extracted  
+
+3. **Gaze Estimation**
+   - Pupil ratio determines direction  
+   - EAR detects blink  
+
+4. **Command Generation**
+   - Gaze mapped to commands  
+   - Safety logic applied  
+
+5. **Communication**
+   - Commands sent via UDP  
+
+6. **Simulation Output**
+   - Wheelchair moves in 3D environment  
+
+---
+
+## 🧩 5. Functional Modules
+
+- Gaze Tracking Module  
+- Blink Detection Module  
+- Control Module  
+- Communication Module  
+- Simulation Module  
+- PDF Control Module  
+
+---
+
+## 📁 6. Core Files
+
+- `gaze_tracker.py` → Eye tracking & command generation  
+- `wheelchair_sim.py` → 3D simulation control  
+
+---
+
+## ⚙️ 7. System Requirements
+
+### Hardware
+- Webcam  
+- Computer/Laptop  
+
+### Software
+- Python 3.8+ / 3.10+  
+- Windows / macOS / Linux  
+
+---
+
+## 📦 8. Required Libraries
+
+- opencv-python  
+- mediapipe  
+- numpy  
+- trimesh  
+- pyglet  
+- PyOpenGL  
+
+---
+
+## 📦 9. Optional Libraries
+
+- matplotlib  
+- scipy  
+- pyautogui  
+- pygame  
+
+---
+
+## 🛠️ 10. Setup Instructions
+
+### Step 1: Create Virtual Environment
+```bash
+python -m venv venv
+
+Step 2: Activate Environment
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Linux/Mac
+
+Step 3: Install Dependencies
+pip install opencv-python mediapipe numpy trimesh pyglet PyOpenGL
+
+---bash---
+pip install opencv-python mediapipe numpy trimesh pyglet PyOpenGL
+
+Step 4: Run the System
+python gaze_tracker.py
+python wheelchair_sim.py
+
+--- 
+
+⚡ 11. System Characteristics
+
+- Real-time performance
+- High accuracy gaze detection
+- Lightweight system
+- Hands-free interaction
+- Safe operation with blink control
+
+----
+
+🎯 12. Practical Value
+
+- Enhances independence for disabled users
+- Reduces reliance on physical controls
+- Improves accessibility
+- Real-world AI application
+
+----
+
+🔮 13. Future Enhancements
+
+- Real wheelchair hardware integration
+- Deep learning-based gaze prediction
+- Voice + eye hybrid control
+- Mobile/embedded deployment
+- Improved lighting robustness
+
+----
+
+🏁 14. Conclusion
+
+The Eye-Gaze Controlled Wheelchair System provides a reliable, real-time, and user-friendly assistive solution. By combining computer vision and machine learning, it transforms eye movements into control actions, enabling greater independence and accessibility.
